@@ -12,7 +12,6 @@ import java.util.List;
 public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
   private BSTNode<T> root;
-  private final List<T> orderedList = new LinkedList<>();
 
   public BSTImpl() {
     root = new BSTLeafNode<>();
@@ -46,19 +45,19 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
   @Override
   public String preOrder() {
     // Serialize.
-    return formatTraversalList(root.preOrder(orderedList));
+    return formatTraversalList(root.preOrder(new LinkedList<>()));
   }
 
   @Override
   public String inOrder() {
     // Serialize.
-    return formatTraversalList(root.inOrder(orderedList));
+    return formatTraversalList(root.inOrder(new LinkedList<>()));
   }
 
   @Override
   public String postOrder() {
     // Serialize.
-    return formatTraversalList(root.postOrder(orderedList));
+    return formatTraversalList(root.postOrder(new LinkedList<>()));
   }
 
   @Override
@@ -73,7 +72,7 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
       return "Empty";
     }
 
-    return formatTraversalList(root.inOrder(orderedList));
+    return formatTraversalList(root.inOrder(new LinkedList<>()));
   }
 
   /**

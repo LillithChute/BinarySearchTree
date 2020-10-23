@@ -59,7 +59,7 @@ public class BSTTest {
   }
 
   /**
-   * Check to see that we can add values and the count matches
+   * Check to see that we can add values and the count matches.
    */
   @Test
   public void testAdd() {
@@ -160,8 +160,9 @@ public class BSTTest {
   @Test
   public void testInOrder() {
     assertEquals("[3 4 5 6 7 8 9]", bst.inOrder());
+    assertEquals(15, bst.inOrder().length());
     assertEquals("[2 3 4 5 6 7 8 9 11]", bstOne.inOrder());
-    assertNull(bstEmpty.inOrder());
+    assertEquals("[]", bstEmpty.inOrder());
   }
 
   /**
@@ -170,8 +171,9 @@ public class BSTTest {
   @Test
   public void testPreOrder() {
     assertEquals("[6 4 3 5 8 7 9]", bst.preOrder());
+    assertEquals(15, bst.preOrder().length());
     assertEquals("[6 4 3 2 5 8 7 11 9]", bstOne.preOrder());
-    assertNull(bstEmpty.preOrder());
+    assertEquals("[]", bstEmpty.inOrder());
   }
 
   /**
@@ -180,7 +182,8 @@ public class BSTTest {
   @Test
   public void testPostOrder() {
     assertEquals("[3 5 4 7 9 8 6]", bst.postOrder());
+    assertEquals(15, bst.postOrder().length());
     assertEquals("[2 3 5 4 7 9 11 8 6]", bstOne.postOrder());
-    assertNull(bstEmpty.postOrder());
+    assertEquals("[]", bstEmpty.inOrder());
   }
 }

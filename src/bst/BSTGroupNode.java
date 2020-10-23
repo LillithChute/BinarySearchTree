@@ -66,9 +66,6 @@ class BSTGroupNode<T extends Comparable<T>> implements BSTNode<T> {
 
   @Override
   public List<T> preOrder(List<T> nodeList) {
-    if (this.data == null) {
-      return null;
-    }
 
     nodeList.add(this.data);
     this.left.preOrder(nodeList);
@@ -80,10 +77,6 @@ class BSTGroupNode<T extends Comparable<T>> implements BSTNode<T> {
   @Override
   public List<T> inOrder(List<T> nodeList) {
 
-    if (this.data == null) {
-      return null;
-    }
-
     this.left.inOrder(nodeList);
     nodeList.add(this.data);
     this.right.inOrder(nodeList);
@@ -93,10 +86,6 @@ class BSTGroupNode<T extends Comparable<T>> implements BSTNode<T> {
 
   @Override
   public List<T> postOrder(List<T> nodeList) {
-
-    if (this.data == null) {
-      return null;
-    }
 
     this.left.postOrder(nodeList);
     this.right.postOrder(nodeList);

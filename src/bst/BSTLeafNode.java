@@ -41,17 +41,17 @@ class BSTLeafNode<T extends Comparable<T>> implements BSTNode<T> {
 
   @Override
   public List<T> preOrder(List<T> nodeList) {
-    return null;
+    return nodeList;
   }
 
   @Override
   public List<T> inOrder(List<T> nodeList) {
-    return null;
+    return nodeList;
   }
 
   @Override
   public List<T> postOrder(List<T> nodeList) {
-    return null;
+    return nodeList;
   }
 
   @Override
